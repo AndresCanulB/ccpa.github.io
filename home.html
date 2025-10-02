@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/home.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header__btn">
+            <button onclick="toggleSidebar()">
+                <i class="fa-solid fa-outdent"></i>
+            </button>
+        </div> 
+        <div class="header__logo">
+            <img class="logo__img" src="/img/logo.png" alt="">
+            <span class="logo__text">CLÍNICA DEL DOLOR</span>       
+        </div>
+        <div class="header__profile">
+            <i class="fa-solid fa-circle-user"></i>
+            <a class="profile__text">USUARIO</a>
+        </div>
+    </header>
+    <nav class="sidebar">       
+        <ul class="sidebar__list">
+            <li class="list__item list__item--active">
+                <a class="item__area">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="area__text area__text--active">INICIO</span>
+                </a>
+            </li>                    
+            <li class="list__item">
+                <a class="item__area" href="colaboradores.html">
+                    <i class="fa-solid fa-user-nurse"></i>
+                    <span class="area__text">COLABORADORES</span>
+                </a>
+            </li>
+            <li class="list__item">
+                <a class="item__area" href="pacientes.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="area__text">PACIENTES</span>
+                </a>
+            </li>
+            <li class="list__item">
+                <a class="item__area" href="articulos.html">
+                    <i class="fa-solid fa-box"></i>
+                    <span class="area__text">ARTICULOS</span>
+                </a>
+            </li>
+            <li class="list__item">
+                <a class="item__area" href="proveedores.html">
+                    <i class="fa-solid fa-truck-front"></i>
+                    <span class="area__text">PROVEEDORES</span>
+                </a>
+            </li>
+            <li class="list__item">
+                <a class="item__area" href="ayuda.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span class="area__text">AYUDA</span>
+                </a>
+            </li>
+        </ul>
+        <div class="sidebar__bottom">
+            <button class="bottom__btn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span class="btn__text">SALIR</span>
+            </button>
+        </div>        
+    </nav>
+    <main class="main">
+        <section class="main__container">
+            <div class="container__content">
+            </div>
+        </section>
+    </main>    
+
+    <script src="https://kit.fontawesome.com/fa4744a987.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/sidebar.js" defer></script>
+</body>
+</html>
