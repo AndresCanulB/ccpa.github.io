@@ -211,7 +211,7 @@ html{
         left: -20px;
         right: -20px;
         bottom: -20px;          
-        background-image: url('/img/background.jpeg'); 
+        background-image: url('img/background.jpeg'); 
         background-size: cover; 
         background-position: center;
         filter: blur(7px); 
