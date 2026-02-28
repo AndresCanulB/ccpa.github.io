@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/index.css">    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
-</head>
-<body class="body">
-    <main class="main">
-        <div class="main__logo">
-            <img class="logo__src" src="img/logo.png" alt="">
-            <span class="logo__text">CLÍNICA DEL DOLOR</span>
-        </div>
-        <form class="main__form" method="post">
-            <h2 class="form__title">INICIAR SESIÓN</h2>
-            <div class="form__group">
-                <label for="email">CORREO:</label>
-                <input placeholder="Ingrese su correo" type="email" id="email" name="email" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="section__logo">
+                <img class="logo__image" src="img/logo.png" alt="">
+                <a href="#" class="logo__name">Clínica del dolor</a>
             </div>
-            
-            <div class="form__group">
-                <label for="password">CONTRASEÑA:</label>
-                <input placeholder="Ingrese su contraseña" type="password" id="password" name="password" required>
-            </div>         
-
-            <button class="form__button" type="submit">INICIAR</button>
-        </form>
-    </main>  
-
-    <script src="https://kit.fontawesome.com/fa4744a987.js" crossorigin="anonymous"></script>
-</body>
+            <nav class="header__menu">
+                <a class="menu__option option--active" href="index.html">Inicio</a>
+                <a class="menu__option" href="events.html">Eventos</a>
+                <a class="menu__option" href="campaigns.html">Campañas</a>
+                <a class="menu__option" href="guide.html">Guía</a>
+                <a class="menu__option" href="about.html">Nosotros</a>
+                <a class="menu__option" href="contact.html">Contacto</a>
+            </nav>
+            <button class="header__button" onclick="toggleMenu()">
+                <i class="fa-solid fa-outdent"></i>
+            </button>
+        </header>
+        <main>
+            <div class="main__welcome">
+                <h1 class="main__title">Permítenos cuidar de ti</h1>
+                <h2 class="main__subtitle">Y de los que tu amas</h2>
+                <p class="main__paragraph">Descubre cómo podemos acompañarte:</p>
+                <button class="main__button">Leer más</button>            
+            </div>
+            <div class="main__ilustration">
+                <img class="main__character" src="img/character1920.png" alt="" srcset="img/character1024.png 1024w, img/character640.png 640w">
+                <img class="main__waves" src="img/Waves1920.png" alt="" srcset="img/Waves1200.png 1200w">
+            </div>
+        </main>
+        <footer>
+            <div class="footer__section">
+                <div class="section__logo">
+                    <img class="logo__image" src="img/whitelogo.png" alt="">
+                    <a href="#">Clínica del dolor</a>
+                </div>
+                <div class="section__social">
+                    <a href="#"><img class="social__icon" src="img/WhatsApp.png" alt=""></a>
+                    <a href="#"><img class="social__icon" src="img/Facebook.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer__section">
+                <address class="section__information">
+                    <h3 class="information__title">Contacto</h3>
+                    <p class="information__paragraph">Ubicación:<span>Av. 2, Atenas, Alajuela, Costa Rica</span></p>
+                    <p class="information__paragraph">Correo Electronico:<span>ccpatenas@gmail.com</span></p>
+                    <p class="information__paragraph">Cedula Juridica:<span>3-006-294587</span></p>
+                    <p class="information__paragraph">Telefono:<span>2446-4431</span></p>    
+                </address>
+                <nav class="section__information">
+                    <h3 class="information__title">Navegación</h3>
+                    <a href="guide.html">Preguntas frecuentes</a>
+                    <a href="donation.html">Haz una donación</a>
+                    <a href="about.html">Sobre nosotros</a>
+                    <a href="contact.html">Contactanos</a>
+                </nav>                
+                <section class="section__information">
+                    <h3 class="information__title">Información legal</h3>
+                    <a href="#">Terminos y condiciones</a>
+                    <a href="#">Politica de privacidad</a>
+                    <a href="#">Politica de cookies</a>
+                    <a href="#">Aviso legal</a>
+                </section>
+            </div>
+            <div class="footer__section">
+                <p class="section__rights">© 2025 Clinica del Dolor. <span>Todos los derechos reservados.</span></p>
+            </div>
+        </footer>
+        <script src="https://kit.fontawesome.com/fa4744a987.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/menu.js" defer></script>
+    </body>
 </html>

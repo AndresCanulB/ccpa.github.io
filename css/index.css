@@ -1,0 +1,176 @@
+main{
+    height: 88vh;
+}
+
+.main__welcome{
+    position: absolute;
+    z-index: 3;
+    left: 12vmin;
+    top: 14vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: calc(var(--min__spacing) * 1.8);
+}
+
+.main__title{
+    color: var(--primary__color);    
+}
+
+.main__subtitle{
+    color: var(--secondary__color);
+}
+
+.main__paragraph{
+    color: var(--primary__color);    
+    line-height: normal;
+}
+
+.main__button{
+    margin-left: 9vmin;
+    background-color: var(--secondary__color);
+}
+
+.main__character{
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    right: 12vmin;
+    bottom: -2vh;        
+    width: 78vmin;
+    height: 64vmin;        
+}
+
+.main__waves{
+    pointer-events: none;
+    position: absolute;
+    z-index: -2;
+    right: -4vw;
+    bottom: -15.4vh;        
+    width: 185vmin;
+    height: 100vmin;
+}   
+
+/* Mobile Portrait */
+@media (min-width: 0px) and (max-width: 1024px) {    
+    main{
+        height: 92vh;
+        display: grid;
+        grid-template-rows: auto 1fr;
+    }
+
+    .main__welcome{
+        position: revert;
+        padding: var(--padding__size);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main__button{    
+        margin-left: 0;
+    }
+
+    .main__ilustration{
+        position: relative;
+    }
+
+    .main__ilustration::before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 45vmin;
+        left: 0;
+        right: 0;
+        bottom: -2%;
+        background-color: var(--primary__color);
+    }
+
+    .main__character{
+        pointer-events: none;
+        position: absolute;
+        z-index: 20;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: min(80vmin, 40vh);
+        height: min(70vmin, 30vh);        
+    }    
+
+    .main__waves{
+        top: -2vmin;
+        left: 60%;
+        transform: translate(-45%, -2vh) rotate(26deg);
+        width: 150vmin;
+        height: 90vmin;       
+    }   
+}
+
+/* Mobile Landscape and Laptop */
+@media (max-width: 1024px) and (orientation: landscape),
+       (min-width: 1025px) and (max-width: 1440px) {
+    main{
+        display: initial;
+        position: relative;
+    }
+
+    .main__welcome{
+        position: absolute;
+        width: 100%;
+        height: 32vmin;
+        left: 4vmin;
+        padding: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .main__button{        
+        margin-left: 12vmin;
+    }
+
+    .main__ilustration{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .main__ilustration::before{
+        content: '';
+        position: absolute;
+        top: initial;
+        z-index: 0;
+        left: initial;
+        right: 0;
+        width: 80vmin;
+        height: 10vmin;
+        bottom: -1vmin;
+        background-color: var(--primary__color);
+    }
+
+    .main__character{
+        pointer-events: none;
+        transform: none;
+        position: absolute;
+        top: initial;
+        z-index: 20;
+        left: initial;
+        right: 7vmin;
+        bottom: -2vmin;
+        width: 60vmin;
+        height: 50vmin;
+    }
+
+    .main__waves{
+        left: initial;
+        right: -24vmin;
+        top: initial;
+        bottom: -2.8vmin;
+        width: 140vmin;
+        height: 80vmin;   
+        transform: rotate(-10deg);
+    }   
+}
+

@@ -1,147 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles/slider.css">    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
-</head>
-<body class="body">
-    <header class="header">
-        <div class="header__logo">
-            <img class="logo__image" src="img/logo.png" alt="">
-            <h2 class="logo__title">CLÍNICA DEL DOLOR</h2>
-        </div>
-        <nav class="header__menu">
-            <a class="menu__option" href="landingpage.html">INICIO</a>
-            <a class="menu__option option--active" href="events.html">EVENTOS</a>
-            <a class="menu__option" href="campaigns.html">CAMPAÑAS</a>
-            <a class="menu__option" href="guide.html">GUÍA</a>
-            <a class="menu__option" href="about.html">NOSOTROS</a>
-            <a class="menu__option" href="contact.html">CONTACTO</a>
-        </nav>
-    </header>
-    <main class="main">   
-        <section class="main__scroll">
-            <button class="main__up">
-                <i class="fa-solid fa-angle-up"></i>
-            </button>
-            <button class="main__down">
-                <i class="fa-solid fa-angle-down"></i>
-            </button>
-        </section>   
-        <section class="main__swiper">         
-            <div class="swiper__container">
-              <div class="container__list swiper-wrapper">                
-                <div class="list__card swiper-slide">
-                  <div class="card__image">
-                    <img class="image__source" src="https://lamenteesmaravillosa.com/wp-content/uploads/2018/07/persona-cogiendo-manos-de-otro.jpg?auto=webp&quality=7500&width=1920&crop=16:9,smart,safe&format=webp&optimize=medium&dpr=2&fit=cover&fm=webp&q=75&w=1920&h=1080" alt="Taller de Apoyo" />
-                    <div class="card__date">15/6/2025</div>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Taller de Apoyo Emocional</h3>
-                    <p class="card__text">Sesión grupal para familiares de pacientes donde compartiremos herramientas para manejar el estrés y las emociones durante el proceso de cuidado.</p>
-                    <div class="card__footer">
-                      <a class="card__button" href="#">Mas Información</a>
-                    </div>
-                  </div>
-                </div>                
-                <div class="list__card swiper-slide">
-                  <div class="card__image">
-                    <img class="image__source" src="https://files.miamineurosciencecenter.com/media/filer_public_thumbnails/filer_public/a3/a4/a3a4229b-091e-4e58-976f-ea86530e4c37/pain_management.jpg__1280x800_q85_crop_subsampling-2.jpg" alt="Charla Informativa" />
-                    <div class="card__date">22/7/2025</div>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Charla: Manejo del Dolor</h3>
-                    <p class="card__text">Conferencia educativa sobre técnicas avanzadas para el manejo del dolor crónico, impartida por especialistas en cuidados paliativos.</p>
-                    <div class="card__footer">
-                      <a class="card__button" href="#">Mas Información</a>
-                    </div>
-                  </div>
-                </div>                
-                <div class="list__card swiper-slide">
-                  <div class="card__image">
-                    <img class="image__source" src="https://img.freepik.com/free-photo/world-hospice-palliative-care-day_23-2149143965.jpg" alt="Día Mundial" />
-                    <div class="card__date">8/10/2025</div>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Día Mundial de los Cuidados Paliativos</h3>
-                    <p class="card__text">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
-                    <div class="card__footer">
-                      <a class="card__button" href="#">Mas Información</a>
-                    </div>
-                  </div>
-                </div>                
-                <div class="list__card swiper-slide">
-                  <div class="card__image">
-                    <img class="image__source" src="https://www.hospitalariasec.org/wp-content/uploads/2023/03/voluntariado.png" alt="Formación Voluntarios" />
-                    <div class="card__date">12/11/2025</div>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Formación de Voluntarios</h3>
-                    <p class="card__text">Programa de capacitación para nuevos voluntarios que deseen formar parte de nuestro equipo de acompañamiento a pacientes en cuidados paliativos.</p>
-                    <div class="card__footer">
-                      <a class="card__button" href="#">Mas Información</a>
-                    </div>
-                  </div>
-                </div>                
-                <div class="list__card swiper-slide">
-                  <div class="card__image">
-                    <img class="image__source" src="https://yagoschool.com/wp-content/uploads/2023/12/la-navidad-en-familia.jpg" alt="Celebración Navideña" />
-                    <div class="card__date">18/12/2025</div>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Celebración Navideña</h3>
-                    <p class="card__text">Fiesta especial para pacientes y sus familias con música, comida y actividades recreativas para brindar momentos de alegría durante las fiestas.</p>
-                    <div class="card__footer">
-                      <a class="card__button" href="#">Mas Información</a>
-                    </div>
-                  </div>
-                </div>  
-              </div>          
-              <div class="swiper-pagination"></div>   
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/swiper.css">
+    </head>
+    <body>
+        <header>
+            <div class="section__logo">
+                <img class="logo__image" src="img/logo.png" alt="">
+                <a href="#" class="logo__name">Clínica del dolor</a>
             </div>
-
-        </section>           
-    </main>
-    <footer class="footer">
-        <div class="footer__branding">
-            <img class="branding__image" src="img/whitelogo.png" alt="">
-            <h2 class="branding__title">CLÍNICA DEL DOLOR</h2>
-        </div>
-        <div class="footer__information">
-            <p>Nos encontramos ubicados en:</p>
-            <p>Cedula Juridica:</p>
-            <p>Correo Electronico:</p>
-            <p>Telefono:</p>    
-            <p>Redes Sociales:</p>
-            <p>Av. 2, Atenas, Alajuela, Costa Rica</p> 
-            <p>3-006-294587</p>  
-            <p>ccpatenas@gmail.com</p>
-            <p>2446-4431</p>
-            <div class="social__icons">
-                <a href="#">
-                <img class="social__whatsapp" src="Componentes/WhatsApp.png" alt=""> 
-                </a>
-                <a href="#">
-                    <img class="social__facebook" src="Componentes/Facebook.png" alt=""> 
-                </a>        
-            </div>           
-        </div>                
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        
-    <script src="js/slider.js"></script>
-    <script src="js/scroll.js"></script>
-
-    <script src="https://kit.fontawesome.com/fa4744a987.js" crossorigin="anonymous"></script>
-</body>
+            <nav class="header__menu">
+                <a class="menu__option" href="index.html">Inicio</a>
+                <a class="menu__option option--active" href="events.html">Eventos</a>
+                <a class="menu__option" href="campaigns.html">Campañas</a>
+                <a class="menu__option" href="guide.html">Guía</a>
+                <a class="menu__option" href="about.html">Nosotros</a>
+                <a class="menu__option" href="contact.html">Contacto</a>
+            </nav>
+            <button class="header__button" onclick="toggleMenu()">
+                <i class="fa-solid fa-outdent"></i>
+            </button>
+        </header>
+        <main>
+            <div class="main__swiper">
+                <div class="swiper__wrapper">
+                    <div class="swiper__slide">
+                        <div class="slide__image">
+                            <img class="image__src" src="img/musical.jpg" alt="">
+                        </div>
+                        <div class="slide__information">
+                            <h3 class="slide__title">Día Mundial de los Cuidados Paliativos</h3>
+                            <p class="slide__paragraph">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
+                            <p class="information__date">19/20/2025</p>
+                        </div>
+                        <div class="slide__button">
+                            <button class="button__info">Mas información</button>
+                        </div>
+                    </div>
+                    <div class="swiper__slide">
+                        <div class="slide__image">
+                            <img class="image__src" src="img/musical.jpg" alt="">
+                        </div>
+                        <div class="slide__information">
+                            <h3 class="slide__title">Día Mundial de los Cuidados Paliativos</h3>
+                            <p class="slide__paragraph">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
+                            <p class="information__date">19/20/2025</p>
+                        </div>
+                        <div class="slide__button">
+                            <button class="button__info">Mas información</button>
+                        </div>
+                    </div>
+                    <div class="swiper__slide">
+                        <div class="slide__image">
+                            <img class="image__src" src="img/musical.jpg" alt="">
+                        </div>
+                        <div class="slide__information">
+                            <h3 class="slide__title">Día Mundial de los Cuidados Paliativos</h3>
+                            <p class="slide__paragraph">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
+                            <p class="information__date">19/20/2025</p>
+                        </div>
+                        <div class="slide__button">
+                            <button class="button__info">Mas información</button>
+                        </div>
+                    </div>
+                    <div class="swiper__slide">
+                        <div class="slide__image">
+                            <img class="image__src" src="img/musical.jpg" alt="">
+                        </div>
+                        <div class="slide__information">
+                            <h3 class="slide__title">Día Mundial de los Cuidados Paliativos</h3>
+                            <p class="slide__paragraph">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
+                            <p class="information__date">19/20/2025</p>
+                        </div>
+                        <div class="slide__button">
+                            <button class="button__info">Mas información</button>
+                        </div>
+                    </div>
+                    <div class="swiper__slide">
+                        <div class="slide__image">
+                            <img class="image__src" src="img/musical.jpg" alt="">
+                        </div>
+                        <div class="slide__information">
+                            <h3 class="slide__title">Día Mundial de los Cuidados Paliativos</h3>
+                            <p class="slide__paragraph">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
+                            <p class="information__date">19/20/2025</p>
+                        </div>
+                        <div class="slide__button">
+                            <button class="button__info">Mas información</button>
+                        </div>
+                    </div>
+                    <div class="swiper__slide">
+                        <div class="slide__image">
+                            <img class="image__src" src="img/musical.jpg" alt="">
+                        </div>
+                        <div class="slide__information">
+                            <h3 class="slide__title">Día Mundial de los Cuidados Paliativos</h3>
+                            <p class="slide__paragraph">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
+                            <p class="information__date">19/20/2025</p>
+                        </div>
+                        <div class="slide__button">
+                            <button class="button__info">Mas información</button>
+                        </div>
+                    </div>
+                    <div class="swiper__slide">
+                        <div class="slide__image">
+                            <img class="image__src" src="img/musical.jpg" alt="">
+                        </div>
+                        <div class="slide__information">
+                            <h3 class="slide__title">Día Mundial de los Cuidados Paliativos</h3>
+                            <p class="slide__paragraph">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
+                            <p class="information__date">19/20/2025</p>
+                        </div>
+                        <div class="slide__button">
+                            <button class="button__info">Mas información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper__navegation">                 
+                    <div class="navegation__prev"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="swiper__pagination"></div>  
+                    <div class="navegation__next"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>    
+        </main>
+        <footer>
+            <div class="footer__section">
+                <div class="section__logo">
+                    <img class="logo__image" src="img/whitelogo.png" alt="">
+                    <a href="#">Clínica del dolor</a>
+                </div>
+                <div class="section__social">
+                    <a href="#"><img class="social__icon" src="img/WhatsApp.png" alt=""></a>
+                    <a href="#"><img class="social__icon" src="img/Facebook.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer__section">
+                <address class="section__information">
+                    <h3 class="information__title">Contacto</h3>
+                    <p class="information__paragraph">Ubicación: <span>Av. 2, Atenas, Alajuela, Costa Rica</span></p>
+                    <p class="information__paragraph">Correo Electronico: <span>ccpatenas@gmail.com</span></p>
+                    <p class="information__paragraph">Cedula Juridica: <span>3-006-294587</span></p>
+                    <p class="information__paragraph">Telefono: <span>2446-4431</span></p>    
+                </address>
+                <nav class="section__information">
+                    <h3 class="information__title">Navegación</h3>
+                    <a href="guide.html">Preguntas frecuentes</a>
+                    <a href="donation.html">Haz una donación</a>
+                    <a href="about.html">Sobre nosotros</a>
+                    <a href="contact.html">Contactanos</a>
+                </nav>                
+                <section class="section__information">
+                    <h3 class="information__title">Información legal</h3>
+                    <a href="#">Terminos y condiciones</a>
+                    <a href="#">Politica de privacidad</a>
+                    <a href="#">Politica de cookies</a>
+                    <a href="#">Aviso legal</a>
+                </section>
+            </div>
+            <div class="footer__section">
+                <p class="section__rights">© 2025 Clinica del Dolor. <span>Todos los derechos reservados.</span></p>
+            </div>
+        </footer>
+        <script src="https://kit.fontawesome.com/fa4744a987.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="./js/swiper.js" defer></script>
+        <script type="text/javascript" src="./js/menu.js" defer></script>
+    </body>
 </html>

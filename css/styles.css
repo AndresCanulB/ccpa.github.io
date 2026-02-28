@@ -1,0 +1,232 @@
+
+/* Variables */
+:root{    
+    /* Colors */
+    --primary__background__color: white;
+    --primary__color: #204394;
+    --secondary__color: #52b247;
+    --font__color: white;
+    --text__color: #333333;
+
+    /* Text */    
+    --h1__size: 6.8vmin;
+    --h2__size: 5.8vmin;
+    --h3__size: 2vmin;
+    --a__size: 2vmin;
+    --p__size: 2vmin;
+    --span__size: 2vmin;
+
+    /* Icons */
+    --icon__size: 3.5vmin;
+    --minicon__size: 2.2vmin;
+    --logo__width: calc(var(--icon__size) + 1.5vmin);
+
+    /* Buttons */
+    --label__height: 6vmin;
+    --label__width: 16vmin;
+
+    /* Buttons */
+    --button__width: 20vmin;
+    --button__height: 7vmin;
+    --button__text: 2vmin;
+    
+    /* Spacing */
+    --padding__size: 5vmin;
+    --margin__size: 5vmin;
+    --gap__size: 5vmin;    
+    --min__spacing: calc(var(--gap__size) / 2);
+    --line__height: calc(100% - 15%);
+
+    /* Shadow */
+    --box__shadow: 0px 0px 0px 0.25vmin rgba(0,0,0,0.06);
+
+    /* Border */
+    --border__style: 0.3vmin solid rgba(0, 0, 0, 0.06);
+
+    /* Time */
+    --animation__time: 600ms;
+
+    /* Animations */
+    --transform__scale: scale(1.02);
+    --transform__translateY: translateY(-0.5vmin);
+    --hover__color: brightness(1.1) saturate(1.1);
+
+    /* Radius */
+    --radius__size: 1.5vmin;
+
+    /* Swipper */
+    --swipper__bullets: 2.2vmin;
+    --swiper__chevron: 3.5vmin;
+}
+
+/* Dark mode */
+[data__theme = 'dark']{
+
+}
+
+/* Global styles */
+*{
+    box-sizing: border-box;
+    line-height: var(--line__height);
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Global animations */
+*,
+*::before,
+*::after {
+    animation-duration: var(--animation__time);
+    transition-duration: var(--animation__time);
+    transition: all var(--animation__time) ease-in-out;
+}
+
+/* Base styles */
+html{
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    color: var(--font__color); 
+}
+
+/* Text */
+h1{
+    font-size: var(--h1__size);
+    font-weight: bold;
+}
+
+h2{
+    font-size: var(--h2__size);
+    font-weight: 600;
+}   
+
+h3{
+    font-size: var(--h3__size);
+    font-weight: 600;
+}   
+
+a{
+    text-decoration: none;
+    font-size: var(--a__size);
+    font-weight: 600;
+    color: var(--font__color);
+}
+
+a:hover{    
+    transform: var(--transform__scale);
+    filter: var(--hover__color);
+}
+
+p{
+    font-size: var(--p__size);
+    text-align: start;
+    font-weight: 500;
+    user-select: text;
+    cursor: text;
+}
+
+span{
+    font-size: var(--span__size);
+    text-align: justify;
+    font-weight: 500;
+    user-select: text;
+    cursor: text;
+}
+
+button{
+    width: var(--button__width);
+    height: var(--button__height);
+    border-radius: var(--radius__size);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: var(--button__text);
+    font-weight: 500;
+    color: white;
+}
+
+button:hover{    
+    transform: var(--transform__scale);
+    filter: var(--hover__color);
+}
+
+
+/* Mobile Portrait */
+@media (min-width: 0px) and (max-width: 1024px) {
+    /* Variables */
+    :root{    
+        /* Text */    
+        --h1__size: 7.7vw;
+        --h2__size: 7.2vw;
+        --h3__size: max(1.6vw, 1.5vh);
+        --a__size: max(1.6vw, 1.5vh);
+        --p__size: max(1.6vw, 1.5vh);
+        --span__size: max(1.6vw, 1.5vh);
+
+        /* Icons */
+        --icon__size: max(3.4vw, 3.2vh);
+        --logo__width: max(4vw, 4.6vh);
+
+        /* Buttons */
+        --button__width: max(20vw, 18vh);
+        --button__height: max(8vw, 7vh);
+        --button__text: max(1.6vw, 1.5vh);
+        
+        /* Spacing */
+        --min__spacing: 3vmin;
+
+        /* Shadow */
+        --box__shadow: 0px 0px 0px 0.4vmin rgba(0,0,0,0.06);
+
+        /* Border */
+        --border__style: 0.5vmin solid rgba(0, 0, 0, 0.06);
+
+        /* Radius */
+        --radius__size: 2vmin;
+
+        /* Swipper */
+        --swipper__bullets: max(2vw, 2vh);
+        --swiper__chevron: max(3.6vw, 3.4vh);
+    }
+}
+
+/* Mobile Landscape and Laptop */
+@media (max-width: 1024px) and (orientation: landscape),
+       (min-width: 1025px) and (max-width: 1440px) {
+    /* Variables */
+    :root{    
+        /* Text */    
+        --h1__size: 5.6vmin;
+        --h2__size: 5.2vmin;
+        --h3__size: 2.4vmin;
+        --a__size: 2.4vmin;
+        --p__size: 2.4vmin;
+        --span__size: 2.4vmin;
+
+        /* Icons */
+        --icon__size: 4vmin;
+        --logo__width: 5.5vmin;
+
+        /* Buttons */
+        --button__width: 20vmin;
+        --button__height: 8vmin;
+        --button__text: 2.2vmin;
+        
+        /* Spacing */
+        --padding__size: 4vmin;
+        --margin__size: 4vmin;
+        --gap__size: 4vmin;
+    }
+}

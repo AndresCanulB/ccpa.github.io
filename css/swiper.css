@@ -1,0 +1,201 @@
+
+.main__swiper {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap__size);
+  padding: var(--padding__size);
+}
+
+.swiper__wrapper {
+  box-sizing: initial;
+  display: flex;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+  width: 100%;
+  z-index: 1;
+}
+
+.swiper__slide {  
+  position: relative;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-rows: 30vh 1fr auto;
+  gap: var(--min__spacing);
+  position: relative;
+  transition-property: transform;
+  cursor: pointer;
+  border-radius: var(--radius__size);
+  box-shadow: var(--box__shadow);
+  padding: var(--min__spacing);
+  overflow: hidden;
+}
+
+.slide__image{
+  width: 100%;
+  height: 100%;
+}
+
+.image__src{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: var(--radius__size);
+}
+
+.slide__information{
+  padding-block: var(--min__spacing);
+  border-block: var(--border__style);
+  color: var(--text__color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--min__spacing);
+}
+
+.slide__title{
+  color: var(--primary__color);
+  line-height: normal;
+}
+
+.slide__paragraph{
+  line-height: normal;
+}
+
+.information__date{
+  position: absolute;
+  background-color: var(--primary__background__color);
+  padding: var(--min__spacing);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: var(--radius__size);
+  right: 0.1vmin;
+  top: 0.1vmin;
+  color: var(--primary__color);
+}
+
+.information__date::after, .information__date::before{
+  content: '';
+  position: absolute;
+  z-index: 0;
+  background-color: transparent;
+  width: var(--min__spacing);
+  height: var(--min__spacing);
+  border-top-right-radius: var(--radius__size);
+  box-shadow: 1vmin -1vmin 0 0.5vmin var(--primary__background__color);
+}
+
+.information__date::after{
+  top: 100%;
+  right: calc(var(--min__spacing) - 0.1vmin);
+}
+
+.information__date::before{
+  top: calc(var(--min__spacing) - 0.1vmin);
+  right: 100%;
+}
+
+.slide__button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__info{
+  background-color: var(--primary__color);
+}
+
+.swiper__slide:hover{
+  transform: var(--transform__translateY)
+}
+
+.swiper__navegation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--min__spacing);
+}
+
+.navegation__prev, .navegation__next{
+  margin: 0;
+  color: var(--secondary__color);
+  position: initial;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .fa-solid{
+    font-size: var(--swiper__chevron);
+    line-height: calc(100% - 12%);
+  }
+}
+
+.swiper__pagination{
+  display: flex;
+  align-items: center;
+  gap: 1vmin;
+}
+
+.swiper-notification{
+  display: none;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  width: auto;
+  display: flex;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-horizontal.swiper-pagination-bullets {
+  .swiper-pagination-bullet {
+    margin: 0;
+    height: var(--swipper__bullets);
+    width: var(--swipper__bullets);
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--secondary__color);
+    filter: brightness(0.9) saturate(0.9);
+  }
+}
+
+/* Auto-play loading indicator */
+.main__swiper .swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary__color);
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: autoplay-loading 5s linear forwards;
+  filter: brightness(1.2) saturate(1.1);
+}
+
+.swiper-pagination-bullet-active::before {
+  animation-play-state: paused;
+}
+
+@keyframes autoplay-loading {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Mobile Portrait */
+@media (min-width: 0px) and (max-width: 1024px) {
+}
+
+/* Mobile Landscape and Laptop */
+@media (max-width: 1024px) and (orientation: landscape),
+       (min-width: 1025px) and (max-width: 1440px) {
+    
+}
+
