@@ -180,8 +180,8 @@ button:hover{
         --logo__width: max(4vw, 4.6vh);
 
         /* Buttons */
-        --button__width: max(20vw, 18vh);
-        --button__height: max(8vw, 7vh);
+        --button__width: max(18vw, 16vh);
+        --button__height: max(7vw, 7vh);
         --button__text: max(1.6vw, 1.5vh);
         
         /* Spacing */
@@ -194,7 +194,7 @@ button:hover{
         --border__style: 0.5vmin solid rgba(0, 0, 0, 0.06);
 
         /* Radius */
-        --radius__size: 2vmin;
+        --radius__size: max(1.5vw, 1.5vh);
 
         /* Swipper */
         --swipper__bullets: max(2vw, 2vh);
@@ -210,10 +210,10 @@ button:hover{
         /* Text */    
         --h1__size: 5.6vmin;
         --h2__size: 5.2vmin;
-        --h3__size: 2.4vmin;
-        --a__size: 2.4vmin;
-        --p__size: 2.4vmin;
-        --span__size: 2.4vmin;
+        --h3__size: 1.8vmin;
+        --a__size: 1.8vmin;
+        --p__size: 1.8vmin;
+        --span__size: 1.8vmin;
 
         /* Icons */
         --icon__size: 4vmin;
@@ -222,11 +222,14 @@ button:hover{
         /* Buttons */
         --button__width: 20vmin;
         --button__height: 8vmin;
-        --button__text: 2.2vmin;
+        --button__text: 1.8vmin;
         
         /* Spacing */
         --padding__size: 4vmin;
         --margin__size: 4vmin;
         --gap__size: 4vmin;
+
+        /* Radius */
+        --radius__size: 1vmin;
     }
 }

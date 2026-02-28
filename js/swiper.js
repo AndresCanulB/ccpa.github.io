@@ -30,11 +30,11 @@ new Swiper(".main__swiper", {
       slidesPerView: 2,
       spaceBetween: getVmin(5),
     },
-    1200: {
+    1100: {
       slidesPerView: 3,
       spaceBetween: getVmin(5),
     },
-    1700: {
+    1800: {
       slidesPerView: 4,
       spaceBetween: getVmin(5),
     },
