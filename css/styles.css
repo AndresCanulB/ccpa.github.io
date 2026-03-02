@@ -11,7 +11,7 @@
     /* Text */    
     --h1__size: 6.8vmin;
     --h2__size: 5.8vmin;
-    --h3__size: 2vmin;
+    --h4__size: 2vmin;
     --a__size: 2vmin;
     --p__size: 2vmin;
     --span__size: 2vmin;
@@ -21,9 +21,13 @@
     --minicon__size: 2.2vmin;
     --logo__width: calc(var(--icon__size) + 1.5vmin);
 
-    /* Buttons */
+    /* Sizes */
     --label__height: 6vmin;
     --label__width: 16vmin;
+    --input__width: 40vw;
+    --input__height: 7vmin;
+    --details__width: 40vw;
+    --summary__height: 7vmin;
 
     /* Buttons */
     --button__width: 18vmin;
@@ -38,7 +42,7 @@
     --line__height: calc(100% - 15%);
 
     /* Shadow */
-    --box__shadow: 0px 0px 0px 0.25vmin rgba(0,0,0,0.06);
+    --box__shadow: 0px 0px 0px 0.15vmin rgba(0,0,0,0.06);
 
     /* Border */
     --border__style: 0.3vmin solid rgba(0, 0, 0, 0.06);
@@ -110,8 +114,8 @@ h2{
     font-weight: 600;
 }   
 
-h3{
-    font-size: var(--h3__size);
+h4{
+    font-size: var(--h4__size);
     font-weight: 600;
 }   
 
@@ -162,6 +166,80 @@ button:hover{
     filter: var(--hover__color);
 }
 
+input{
+    border: none;
+    outline: none;
+    width: var(--input__width);
+    height: var(--input__height);
+    padding: var(--min__spacing);
+    border-radius: var(--radius__size);
+    box-shadow: var(--box__shadow);
+    font-size: var(--p__size);
+    color: var(--primary__color);
+    font-weight: 600;
+    cursor: url("/img/search__icon.svg") 10 10, auto;
+
+    background: url("/img/search__icon.svg");
+    background-repeat: no-repeat;
+    background-size: var(--minicon__size);
+    background-position: right var(--min__spacing) center;
+}
+
+::placeholder{
+    color: var(--primary__color);
+}
+
+details{
+    width: 40vw;    
+    box-shadow: var(--box__shadow);
+    border-radius: var(--radius__size);
+    color: var(--text__color);    
+
+    p{
+        padding: var(--min__spacing);
+        line-height: normal;
+        display: none;
+    }
+}
+
+summary{
+    height: var(--summary__height);
+    padding: var(--min__spacing);
+    list-style: none;
+    cursor: pointer;
+    color: var(--primary__color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--radius__size);
+}
+
+summary::after{
+    content: "▼";
+    float: right;
+}
+
+details[open] {
+    display: flex;
+    flex-direction: column;
+
+    summary {
+        background-color: var(--primary__color);
+        color: var(--font__color);
+    }
+
+    summary::after {
+        transform: rotate(180deg);
+    }    
+
+    p{
+        display: block;
+    }
+}
+
+input:focus, input:hover, input:active, details:focus, details:hover{
+    box-shadow: 0 0 0 0.15vmin var(--secondary__color);
+}
 
 /* Mobile Portrait */
 @media (min-width: 0px) and (max-width: 1024px) {
@@ -170,7 +248,7 @@ button:hover{
         /* Text */    
         --h1__size: 7.7vw;
         --h2__size: 7.2vw;
-        --h3__size: max(1.6vw, 1.5vh);
+        --h4__size: max(1.6vw, 1.5vh);
         --a__size: max(1.6vw, 1.5vh);
         --p__size: max(1.6vw, 1.5vh);
         --span__size: max(1.6vw, 1.5vh);
@@ -208,7 +286,7 @@ button:hover{
         /* Text */    
         --h1__size: 5.6vmin;
         --h2__size: 5.2vmin;
-        --h3__size: 1.8vmin;
+        --h4__size: 1.8vmin;
         --a__size: 1.8vmin;
         --p__size: 1.8vmin;
         --span__size: 1.8vmin;
