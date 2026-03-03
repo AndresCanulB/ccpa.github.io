@@ -1,19 +1,68 @@
 
 main{
-    display: grid;
     height: 92vh;
-    grid-template-columns: 1fr auto;
     padding: var(--padding__size);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--gap__size);
+
+    ::-webkit-scrollbar{
+        display: block;
+    }
 }
 
 .main__ilustration{
     background-color: green;
+    padding: var(--padding__size);
 }
 
 .main__guide{
     display: flex;
     flex-direction: column;
     gap: var(--gap__size);
+    overflow: hidden;
+    padding: 0.3vmin;
 }
 
+.guide__list{    
+    padding: var(--padding__size);
+    box-shadow: var(--box__shadow);
+    border-radius: var(--radius__size);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap__size); 
+    
+    &:hover{
+        box-shadow: 0 0 0 0.15vmin var(--secondary__color);
+    }
+}
+
+/* Mobile Portrait */
+@media (min-width: 0px) and (max-width: 1024px) {
+    main{
+        height: auto;
+        grid-template-columns: initial;
+        grid-template-rows: 1fr 1fr;     
+        gap: var(--gap__size);
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
+    }
+
+    .main__guide{
+        padding: 0;
+        overflow: initial;
+    }
+
+    .guide__list{
+        padding: 0;
+        overflow: initial;
+        box-shadow: none;
+
+        &:hover{
+            box-shadow: none;
+        }
+    }
+}

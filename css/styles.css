@@ -24,10 +24,9 @@
     /* Sizes */
     --label__height: 6vmin;
     --label__width: 16vmin;
-    --input__width: 40vw;
     --input__height: 7vmin;
-    --details__width: 40vw;
     --summary__height: 7vmin;
+    --scrollbar__width: 2.5vmin;
 
     /* Buttons */
     --button__width: 18vmin;
@@ -83,6 +82,15 @@
 
 ::-webkit-scrollbar{
     display: none;
+    background-color: var(--primary__background__color);
+    width: var(--scrollbar__width);
+    border-radius: calc(var(--radius__size) / 2);
+    box-shadow: 0 0 0 0.15vmin var(--secondary__color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary__color);
+    border-radius: calc(var(--radius__size) / 2);
 }
 
 /* Global animations */
@@ -169,19 +177,19 @@ button:hover{
 input{
     border: none;
     outline: none;
-    width: var(--input__width);
-    height: var(--input__height);
-    padding: var(--min__spacing);
+    width: 100%;
+    padding-inline: var(--min__spacing);
     border-radius: var(--radius__size);
     box-shadow: var(--box__shadow);
     font-size: var(--p__size);
     color: var(--primary__color);
+    line-height: var(--input__height);
     font-weight: 600;
     cursor: url("/img/search__icon.svg") 10 10, auto;
 
     background: url("/img/search__icon.svg");
     background-repeat: no-repeat;
-    background-size: var(--minicon__size);
+    background-size: var(--h4__size);
     background-position: right var(--min__spacing) center;
 }
 
@@ -190,7 +198,7 @@ input{
 }
 
 details{
-    width: 40vw;    
+    width: 100%;    
     box-shadow: var(--box__shadow);
     border-radius: var(--radius__size);
     color: var(--text__color);    
@@ -203,8 +211,7 @@ details{
 }
 
 summary{
-    height: var(--summary__height);
-    padding: var(--min__spacing);
+    padding-inline: var(--min__spacing);
     list-style: none;
     cursor: pointer;
     color: var(--primary__color);
@@ -212,11 +219,17 @@ summary{
     align-items: center;
     justify-content: space-between;
     border-radius: var(--radius__size);
+
+    h4{
+        line-height: var(--summary__height);
+    }
 }
 
 summary::after{
     content: "▼";
     float: right;
+    font-size: var(--p__size);
+    line-height: 0;
 }
 
 details[open] {
@@ -270,7 +283,7 @@ input:focus, input:hover, input:active, details:focus, details:hover{
         --border__style: max(0.35vw, 0.35vh) solid rgba(0, 0, 0, 0.06);
 
         /* Radius */
-        --radius__size: max(1.5vw, 1.5vh);
+        --radius__size: max(1.2vw, 1.2vh);
 
         /* Swipper */
         --swipper__bullets: max(2vw, 2vh);
@@ -304,6 +317,12 @@ input:focus, input:hover, input:active, details:focus, details:hover{
         --padding__size: 4vmin;
         --margin__size: 4vmin;
         --gap__size: 4vmin;
+
+        /* Shadow */
+        --box__shadow: 0px 0px 0px 0.15vmin rgba(0,0,0,0.06);
+
+        /* Border */
+        --border__style: 0.3vmin solid rgba(0, 0, 0, 0.06);
 
         /* Radius */
         --radius__size: 1vmin;
