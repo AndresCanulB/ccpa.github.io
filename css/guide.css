@@ -24,6 +24,14 @@ main{
     padding: 0.3vmin;
 }
 
+.guide__search{
+    cursor: url("/img/search__icon.svg") 10 10, auto;
+    background: url("/img/search__icon.svg");
+    background-repeat: no-repeat;
+    background-size: var(--h4__size);
+    background-position: right var(--min__spacing) center;
+}
+
 .guide__list{    
     padding: var(--padding__size);
     box-shadow: var(--box__shadow);

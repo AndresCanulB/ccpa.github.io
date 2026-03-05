@@ -1,0 +1,36 @@
+.main__swiper {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap__size);
+    padding: var(--padding__size);
+}
+
+.swiper__wrapper {
+    box-sizing: initial;
+    display: flex;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    transition-timing-function: linear;
+    width: 100%;
+    z-index: 1;
+}
+
+.swiper__slide {  
+    position: relative;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-rows: 30vh 1fr auto;
+    gap: var(--min__spacing);
+    position: relative;
+    transition-property: transform;
+    border-radius: var(--radius__size);
+    box-shadow: var(--box__shadow);
+    padding: var(--min__spacing);
+    overflow: hidden;
+}
+
+.swiper-notification{
+    display: none;
+}

@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/layout.css">
-        <link rel="stylesheet" href="css/index.css">
+        <title>Document</title>        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/contact.css">
     </head>
     <body>
         <header>
@@ -18,12 +19,12 @@
                 <a href="#" class="logo__name">Clínica del dolor</a>
             </div>
             <nav class="header__menu">
-                <a class="menu__option option--active" href="index.html">Inicio</a>
+                <a class="menu__option" href="index.html">Inicio</a>
                 <a class="menu__option" href="events.html">Eventos</a>
                 <a class="menu__option" href="campaigns.html">Campañas</a>
                 <a class="menu__option" href="guide.html">Guía</a>
                 <a class="menu__option" href="about.html">Nosotros</a>
-                <a class="menu__option" href="contact.html">Contacto</a>
+                <a class="menu__option option--active" href="contact.html">Contacto</a>
                 <a class="menu__option" href="donations.html">Ayudanos</a>
             </nav>
             <button class="header__button" onclick="toggleMenu()">
@@ -31,16 +32,22 @@
             </button>
         </header>
         <main>
-            <div class="main__welcome">
-                <h1 class="main__title">Permítenos cuidar de ti</h1>
-                <h2 class="main__subtitle">Y de los que tu amas</h2>
-                <p class="main__paragraph">Descubre cómo podemos acompañarte:</p>
-                <button class="main__button">Consultar</button>            
-            </div>
-            <div class="main__ilustration">
-                <img class="main__character" src="img/character1920.png" alt="" srcset="img/character1024.png 1024w, img/character640.png 640w">
-                <img class="main__waves" src="img/Waves1920.png" alt="" srcset="img/Waves1200.png 1200w">
-            </div>
+            <div class="main__swiper">
+                <div class="swiper__wrapper">
+                    <div class="swiper__slide">
+                        <div class="slide__image">
+                        </div>
+                        <div class="slide__information">
+                            <h4 class="slide__title">Día Mundial de los Cuidados Paliativos</h4>
+                            <p class="slide__paragraph">Celebración especial con actividades de concientización, música en vivo y testimonios de pacientes y familiares sobre la importancia de los cuidados paliativos.</p>
+                            <p class="information__date">19/20/2025</p>
+                        </div>
+                    </div>       
+                    <div class="swiper__slide"></div>   
+                    <div class="swiper__slide"></div>      
+                    <div class="swiper__slide"></div>    
+                </div>                    
+            </div>    
         </main>
         <footer>
             <div class="footer__section">
@@ -55,21 +62,21 @@
             </div>
             <div class="footer__section">
                 <address class="section__information">
-                    <h3 class="information__title">Contacto</h3>
-                    <p class="information__paragraph">Ubicación:<span>Av. 2, Atenas, Alajuela, Costa Rica</span></p>
-                    <p class="information__paragraph">Correo Electronico:<span>ccpatenas@gmail.com</span></p>
-                    <p class="information__paragraph">Cedula Juridica:<span>3-006-294587</span></p>
-                    <p class="information__paragraph">Telefono:<span>2446-4431</span></p>    
+                    <h4 class="information__title">Contacto</h4>
+                    <p class="information__paragraph">Ubicación: <span>Av. 2, Atenas, Alajuela, Costa Rica</span></p>
+                    <p class="information__paragraph">Correo Electronico: <span>ccpatenas@gmail.com</span></p>
+                    <p class="information__paragraph">Cedula Juridica: <span>3-006-294587</span></p>
+                    <p class="information__paragraph">Telefono: <span>2446-4431</span></p>    
                 </address>
                 <nav class="section__information">
-                    <h3 class="information__title">Navegación</h3>
+                    <h4 class="information__title">Navegación</h4>
                     <a href="guide.html">Preguntas frecuentes</a>
                     <a href="donation.html">Haz una donación</a>
                     <a href="about.html">Sobre nosotros</a>
                     <a href="contact.html">Contactanos</a>
                 </nav>                
                 <section class="section__information">
-                    <h3 class="information__title">Información legal</h3>
+                    <h4 class="information__title">Información legal</h4>
                     <a href="#">Terminos y condiciones</a>
                     <a href="#">Politica de privacidad</a>
                     <a href="#">Politica de cookies</a>
@@ -81,6 +88,8 @@
             </div>
         </footer>
         <script src="https://kit.fontawesome.com/fa4744a987.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="./js/cards.js" defer></script>
         <script type="text/javascript" src="./js/menu.js" defer></script>
     </body>
 </html>

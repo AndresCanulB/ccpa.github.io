@@ -22,10 +22,8 @@
     --logo__width: calc(var(--icon__size) + 1.5vmin);
 
     /* Sizes */
-    --label__height: 6vmin;
-    --label__width: 16vmin;
-    --input__height: 7vmin;
-    --summary__height: 7vmin;
+    --input__height: 7vh;
+    --summary__height: 7vh;
     --scrollbar__width: 2.5vmin;
 
     /* Buttons */
@@ -178,19 +176,13 @@ input{
     border: none;
     outline: none;
     width: 100%;
-    padding-inline: var(--min__spacing);
+    padding-inline: var(--min__spacing) calc(var(--min__spacing) * 3);
     border-radius: var(--radius__size);
     box-shadow: var(--box__shadow);
     font-size: var(--p__size);
     color: var(--primary__color);
     line-height: var(--input__height);
     font-weight: 600;
-    cursor: url("/img/search__icon.svg") 10 10, auto;
-
-    background: url("/img/search__icon.svg");
-    background-repeat: no-repeat;
-    background-size: var(--h4__size);
-    background-position: right var(--min__spacing) center;
 }
 
 ::placeholder{
@@ -203,14 +195,21 @@ details{
     border-radius: var(--radius__size);
     color: var(--text__color);    
 
-    p{
+    div{
+        transform-origin: top;     
         padding: var(--min__spacing);
+        display: flex;
+        flex-direction: column;
+        gap: var(--min__spacing);
+    }
+
+    p{
         line-height: normal;
-        display: none;
     }
 }
 
 summary{
+    height: var(--summary__height);
     padding-inline: var(--min__spacing);
     list-style: none;
     cursor: pointer;
@@ -221,7 +220,7 @@ summary{
     border-radius: var(--radius__size);
 
     h4{
-        line-height: var(--summary__height);
+        line-height: normal;
     }
 }
 
@@ -230,6 +229,12 @@ summary::after{
     float: right;
     font-size: var(--p__size);
     line-height: 0;
+}
+
+details:not([open]){
+    div{
+        transform: scale(0);        
+    }
 }
 
 details[open] {
@@ -245,8 +250,8 @@ details[open] {
         transform: rotate(180deg);
     }    
 
-    p{
-        display: block;
+    div{
+        transform: scale(1);
     }
 }
 
@@ -272,7 +277,11 @@ input:focus, input:hover, input:active, details:focus, details:hover{
 
         /* Buttons */
         --button__text: max(1.6vw, 1.5vh);
-        
+
+        /* Sizes */
+        --input__height: 6vh;
+        --summary__height: 6vh;
+
         /* Spacing */
         --min__spacing: 3vmin;
 
@@ -312,6 +321,11 @@ input:focus, input:hover, input:active, details:focus, details:hover{
         --button__width: 18vmin;
         --button__height: 7vmin;
         --button__text: 1.8vmin;
+
+        /* Sizes */
+        --input__height: 7vmin;
+        --summary__height: 7vmin;
+        --scrollbar__width: 2.5vmin;
         
         /* Spacing */
         --padding__size: 4vmin;
