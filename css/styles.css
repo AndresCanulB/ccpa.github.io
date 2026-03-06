@@ -39,10 +39,10 @@
     --line__height: calc(100% - 15%);
 
     /* Shadow */
-    --box__shadow: 0px 0px 0px 0.15vmin rgba(0,0,0,0.06);
+    --box__shadow: 0px 0px 0px 0.15vmin rgba(0,0,0,0.07);
 
     /* Border */
-    --border__style: 0.3vmin solid rgba(0, 0, 0, 0.06);
+    --border__style: 0.3vmin solid rgba(0, 0, 0, 0.07);
 
     /* Time */
     --animation__time: 600ms;
@@ -153,6 +153,11 @@ span{
     cursor: text;
 }
 
+label{
+    font-size: var(--h4__size);
+    font-weight: 500;
+}
+
 button{
     width: var(--button__width);
     height: var(--button__height);
@@ -165,24 +170,35 @@ button{
     font-size: var(--button__text);
     font-weight: 500;
     color: white;
+    line-height: 0;
 }
 
 button:hover{    
+    will-change: transform;
+    transform: translateZ(0);
     transform: var(--transform__scale);
     filter: var(--hover__color);
 }
 
-input{
+input, textarea{
     border: none;
     outline: none;
     width: 100%;
+    background-color: var(--primary__background__color);
     padding-inline: var(--min__spacing) calc(var(--min__spacing) * 3);
     border-radius: var(--radius__size);
     box-shadow: var(--box__shadow);
     font-size: var(--p__size);
     color: var(--primary__color);
     line-height: var(--input__height);
-    font-weight: 600;
+    font-weight: 500;
+}
+
+textarea{
+    font-family: "Rubik", serif;
+    padding: var(--min__spacing);
+    resize: none;
+    font-weight: 400;
 }
 
 ::placeholder{
@@ -255,7 +271,7 @@ details[open] {
     }
 }
 
-input:focus, input:hover, input:active, details:focus, details:hover{
+textarea:focus, textarea:hover, textarea:active, input:focus, input:hover, input:active, details:focus, details:hover{
     box-shadow: 0 0 0 0.15vmin var(--secondary__color);
 }
 

@@ -17,10 +17,10 @@ new Swiper(".main__swiper", {
   breakpoints: {
     0: {
       slidesPerView: 1,
-      spaceBetween: getVmin(100),
+      spaceBetween: getVmin(5),
     },
     700: {
-      slidesPerView: 2,
+      slidesPerView: 4,
       spaceBetween: getVmin(5),
     },
     1100: {

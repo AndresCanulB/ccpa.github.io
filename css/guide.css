@@ -30,6 +30,7 @@ main{
     background-repeat: no-repeat;
     background-size: var(--h4__size);
     background-position: right var(--min__spacing) center;
+    font-weight: 600;
 }
 
 .guide__list{    

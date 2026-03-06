@@ -24,7 +24,6 @@
   display: grid;
   grid-template-rows: 30vh 1fr auto;
   gap: var(--min__spacing);
-  position: relative;
   transition-property: transform;
   cursor: pointer;
   border-radius: var(--radius__size);
