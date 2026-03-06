@@ -1,10 +1,8 @@
 main{
     position: relative;
     height: 92vh;
-    padding: var(--padding__size);
     display: flex;
     flex-direction: column;
-    gap: var(--gap__size);
 
     &::after{
         content: "";
@@ -13,34 +11,33 @@ main{
         bottom: -1vmin;
         left: -1vmin;
         right: -1vmin;
-        top: 17vh;
+        top: 15vh;
         background-color: var(--primary__color);
     }
 }
 
-.main__swiper {
-    height: 32vh;
+.main__marquee{
+    height: 38vh;
     display: flex;
-    flex-direction: column;
-    gap: var(--gap__size);
+    overflow-x: auto;
+    padding: var(--padding__size);
 }
 
-.swiper__wrapper {
-    box-sizing: initial;
+.marquee__group{
+    height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vmin;
+    animation: spin 30s infinite linear;
+    padding-right: 5vmin;
+}
+
+.group__card{
+    flex: 0 0 40vmin;
     height: 100%;
     position: relative;
-    transition-property: transform;
-    transition-timing-function: linear;
-    width: 100%;
-    z-index: 1;
-}
-
-.swiper__slide {  
-    position: relative;
-    z-index: -1;
     background-color: var(--primary__background__color);
-    flex-shrink: 0;
     border-radius: var(--radius__size);
     color: var(--primary__color);
     box-shadow: var(--box__shadow);
@@ -55,40 +52,56 @@ main{
         position: absolute;
         font-size: var(--icon__size);
         color: var(--secondary__color);
-        top: 0;
-        height: 7vmin;
-        width: 10vmin;
+        top: -4vmin;
+        height: 12vmin;
+        width: 12vmin;
         background-color: var(--primary__background__color);
-        box-shadow: var(--box__shadow);
+        border-radius: 50%;
+        box-shadow: inset var(--box__shadow);
         display: flex;
-        align-items: center;
         justify-content: center;
-        border-radius: var(--radius__size);
+        align-items: center;
 
         &::after{
             content: "";
             position: absolute;
-            z-index: -1;
-            top: 0;
-            height: 9vmin;
-            width: 14vmin;
+            z-index: 1;
+            top: -0.2vmin;
+            width: 11.3vmin;
+            height: 4.2vmin;
             background-color: var(--primary__background__color);
-            border-radius: 0 0 var(--radius__size) var(--radius__size);
+        }
+
+        &::before{
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 8vmin;
+            height: 8vmin;
+            background-color: var(--primary__background__color);
             box-shadow: var(--box__shadow);
+            border-radius: 50%;
         }
     }
 }
 
-.swiper__slide:hover{
+.group__card:hover{
     box-shadow: 0 0 0 0.15vmin var(--secondary__color);
-}
-
-.swiper-notification{
-    display: none;
+    
+    .fa-solid{
+        box-shadow: 0 0 0 0.15vmin var(--secondary__color);
+        
+        &::before{
+            box-shadow: 0 0 0 0.15vmin var(--secondary__color);
+        }
+    }
 }
 
 .main__contact{
     height: 100%;
+    padding-inline: var(--padding__size);
+    padding-bottom: var(--padding__size);
     display: grid;
     grid-template-columns: 1fr 40%;
     gap: var(--gap__size);
@@ -128,4 +141,9 @@ main{
 .form__button:hover{
     background-color: var(--secondary__color);
     color: var(--primary__background__color);
+}
+
+@keyframes spin{
+    from {translate: 0;}
+    to {translate: -100%;}
 }
