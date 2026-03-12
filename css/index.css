@@ -1,5 +1,5 @@
 main{
-    height: 88vh;
+    height: 200vh;
 }
 
 .main__welcome{
@@ -31,24 +31,27 @@ main{
     background-color: var(--secondary__color);
 }
 
-.main__character{
-    pointer-events: none;
-    position: absolute;
-    z-index: -1;
-    right: 12vmin;
-    bottom: -2vh;        
-    width: 78vmin;
-    height: 64vmin;        
+.main__ilustration{
+    position: relative;
+    height: 92vh;
+    display: flex;
+    padding-top: var(--padding__size);
+    justify-content: end;
 }
 
-.main__waves{
-    pointer-events: none;
+.main__character{
     position: absolute;
-    z-index: -2;
-    right: -4vw;
-    bottom: -15.4vh;        
-    width: 185vmin;
-    height: 100vmin;
+    z-index: 1;
+    right: 12vmin; 
+    top: 14vmin;   
+    width: 78vmin;
+    height: 68vmin;        
+}
+
+.main__waves{   
+    position: absolute;
+    width: 145vmin;
+    height: 100%;
 }   
 
 /* Mobile Portrait */
