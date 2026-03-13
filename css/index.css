@@ -1,5 +1,6 @@
 main{
     height: 200vh;
+    padding-inline: var(--padding__size);
 }
 
 .main__welcome{
@@ -35,22 +36,21 @@ main{
     position: relative;
     height: 92vh;
     display: flex;
-    padding-top: var(--padding__size);
+    padding-block: var(--padding__size);
     justify-content: end;
 }
 
 .main__character{
     position: absolute;
     z-index: 1;
-    right: 12vmin; 
-    top: 14vmin;   
-    width: 78vmin;
-    height: 68vmin;        
+    right: 16vmin; 
+    top: 22vmin;   
+    width: 70vmin;
+    height: 60vmin;        
 }
 
 .main__waves{   
-    position: absolute;
-    width: 145vmin;
+    width: 120vmin;
     height: 100%;
 }   
 
