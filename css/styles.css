@@ -3,9 +3,10 @@
 :root{    
     /* Colors */
     --primary__background__color: white;
-    --primary__color: #204394;
+    --secondary__background__color: #f8f9fb;
+    --primary__color: #294686;
     --secondary__color: #52b247;
-    --font__color: white;
+    --font__color: #FFFFFF;
     --text__color: #333333;
 
     /* Text */    
@@ -174,9 +175,6 @@ button{
 }
 
 button:hover{    
-    will-change: transform;
-    transform: translateZ(0);
-    transform: var(--transform__scale);
     filter: var(--hover__color);
 }
 

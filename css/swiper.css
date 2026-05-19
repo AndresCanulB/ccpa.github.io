@@ -1,6 +1,6 @@
 
 .main__swiper {
-  height: 92vh;
+  height: 91vh;
   display: flex;
   flex-direction: column;
   gap: var(--gap__size);
@@ -103,7 +103,9 @@
 }
 
 .button__info{
-  background-color: var(--primary__color);
+  background-image: url('/img/textures/buttons/blue.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .swiper__slide:hover{

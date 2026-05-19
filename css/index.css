@@ -34,22 +34,13 @@ main{
 
 .main__ilustration{
     position: relative;
-    height: 92vh;
+    height: 91vh;
     display: flex;
     padding-block: var(--padding__size);
     justify-content: end;
 }
 
-.main__character{
-    position: absolute;
-    z-index: 1;
-    right: 16vmin; 
-    top: 22vmin;   
-    width: 70vmin;
-    height: 60vmin;        
-}
-
-.main__waves{   
+.index__ilustration{   
     width: 120vmin;
     height: 100%;
 }   
@@ -91,18 +82,7 @@ main{
         background-color: var(--primary__color);
     }
 
-    .main__character{
-        pointer-events: none;
-        position: absolute;
-        z-index: 20;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -40%);
-        width: min(80vmin, 40vh);
-        height: min(70vmin, 30vh);        
-    }    
-
-    .main__waves{
+    .index__ilustration{
         top: -2vmin;
         left: 60%;
         transform: translate(-45%, -2vh) rotate(26deg);
@@ -153,20 +133,7 @@ main{
         background-color: var(--primary__color);
     }
 
-    .main__character{
-        pointer-events: none;
-        transform: none;
-        position: absolute;
-        top: initial;
-        z-index: 20;
-        left: initial;
-        right: 7vmin;
-        bottom: -2vmin;
-        width: 60vmin;
-        height: 50vmin;
-    }
-
-    .main__waves{
+    .index__ilustration{
         left: initial;
         right: -24vmin;
         top: initial;
@@ -176,4 +143,3 @@ main{
         transform: rotate(-10deg);
     }   
 }
-
